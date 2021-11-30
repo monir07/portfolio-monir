@@ -7,6 +7,7 @@ import AlbumIcon from '@mui/icons-material/Album';
 import { Fab } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import Rotate from 'react-reveal/Rotate';
 
 
 const Resume = () => {
@@ -24,13 +25,10 @@ const Resume = () => {
     }));
 
     return (
-        <Container maxWidth="xl">
+        <Container>
             <Box sx={{ flexGrow: 1 }}>
                 <Typography sx={{ fontWeight: 'bold', mt: 2, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
                     Resume
-                </Typography>
-                <Typography sx={{ fontWeight: 'bold', mt: 2 }} variant="h2" component="h2">
-                    Combination of Skill<br /> & Experience
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={6} md={6}>
@@ -40,20 +38,22 @@ const Resume = () => {
                                 Education
                             </Typography>
                         </Box>
-                        <Box sx={{ my: 6 }}>
-                            <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
-                                Computer Science & Engineering
-                            </Typography>
-                            <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="h5" component="h2">
-                                Northern University of Business and Technology
-                            </Typography>
-                            <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="body1" component="span">
-                                The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.
-                            </Typography><br />
-                            <Fab variant="extended" size="small" color="white" aria-label="add" sx={{ px: 3, my: 2 }}>
-                                2016-2021
-                            </Fab>
-                        </Box>
+                        <Rotate top left>
+                            <Box sx={{ my: 6 }}>
+                                <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
+                                    Computer Science & Engineering
+                                </Typography>
+                                <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="h5" component="h2">
+                                    Northern University of Business and Technology
+                                </Typography>
+                                <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="body1" component="span">
+                                    The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.
+                                </Typography><br />
+                                <Fab variant="extended" size="small" color="white" aria-label="add" sx={{ px: 3, my: 2 }}>
+                                    2016-2021
+                                </Fab>
+                            </Box>
+                        </Rotate>
                         <Box sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
                                 Computer Science & Engineering
@@ -172,13 +172,13 @@ const Resume = () => {
                             <Typography sx={{ fontWeight: 'bold', my: 2, }} variant="h5" component="h2">
                                 Design Tools
                             </Typography>
-                            <Fab sx={{ px: 2, mx: 1 }} variant="extended" size="small" color="primary" aria-label="add">
+                            <Fab sx={{ px: 2, m: 1 }} variant="extended" size="small" color="primary" aria-label="add">
                                 Photoshop
                             </Fab>
-                            <Fab sx={{ px: 2, mx: 1 }} variant="extended" size="small" color="primary" aria-label="add">
+                            <Fab sx={{ px: 2, m: 1 }} variant="extended" size="small" color="primary" aria-label="add">
                                 Illustrator
                             </Fab>
-                            <Fab sx={{ px: 2, mx: 1 }} variant="extended" size="small" color="primary" aria-label="add">
+                            <Fab sx={{ px: 2, m: 1 }} variant="extended" size="small" color="primary" aria-label="add">
                                 Figma
                             </Fab>
                         </Box>
@@ -186,10 +186,10 @@ const Resume = () => {
                             <Typography sx={{ fontWeight: 'bold', my: 2, }} variant="h5" component="h2">
                                 IOT Technology
                             </Typography>
-                            <Fab sx={{ px: 2, mx: 1 }} variant="extended" size="small" color="primary" aria-label="add">
+                            <Fab sx={{ px: 2, m: 1 }} variant="extended" size="small" color="primary" aria-label="add">
                                 Arduino
                             </Fab>
-                            <Fab sx={{ px: 2, mx: 1 }} variant="extended" size="small" color="primary" aria-label="add">
+                            <Fab sx={{ px: 2, m: 1 }} variant="extended" size="small" color="primary" aria-label="add">
                                 Rasberry Pi
                             </Fab>
                         </Box>

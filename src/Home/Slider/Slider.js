@@ -8,11 +8,11 @@ import image1 from '../../Banner-img.png';
 const Slider = () => {
 
     return (
-        <Container maxWidth="xl">
+        <Container>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={6} md={8} sx={{ display: 'flex', alignItems: 'center', }}>
-                        <Box>
+                        <Box sx={{ my: 8 }}>
                             <Typography sx={{ color: '#ff451b' }} variant="h4" component="h2">I'm</Typography>
                             <Typography sx={{ fontWeight: 'bold', mt: 2, color: '#ff451b' }} variant="h1" component="h2">
                                 Monirul Islam
@@ -24,7 +24,7 @@ const Slider = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={6} md={4} sx={{ display: 'flex', alignItems: 'center', }}>
-                        <Box>
+                        <Box sx={{ my: 8 }}>
                             <img
                                 src={`${image1}?w=161&fit=crop&auto=format`}
                                 alt="main"

@@ -7,7 +7,8 @@ import AlbumIcon from '@mui/icons-material/Album';
 import { Fab } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import Rotate from 'react-reveal/Rotate';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Resume = () => {
@@ -23,11 +24,14 @@ const Resume = () => {
             backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
         },
     }));
-
+    // aos animation initialization
+    React.useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
     return (
-        <Container>
+        <Container id="_resume">
             <Box sx={{ flexGrow: 1 }}>
-                <Typography sx={{ fontWeight: 'bold', mt: 2, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
+                <Typography sx={{ fontWeight: 'bold', my: 2, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
                     Resume
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
@@ -38,23 +42,21 @@ const Resume = () => {
                                 Education
                             </Typography>
                         </Box>
-                        <Rotate top left>
-                            <Box sx={{ my: 6 }}>
-                                <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
-                                    Computer Science & Engineering
-                                </Typography>
-                                <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="h5" component="h2">
-                                    Northern University of Business and Technology
-                                </Typography>
-                                <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="body1" component="span">
-                                    The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.
-                                </Typography><br />
-                                <Fab variant="extended" size="small" color="white" aria-label="add" sx={{ px: 3, my: 2 }}>
-                                    2016-2021
-                                </Fab>
-                            </Box>
-                        </Rotate>
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="zoom-in" sx={{ my: 6 }}>
+                            <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
+                                Computer Science & Engineering
+                            </Typography>
+                            <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="h5" component="h2">
+                                Northern University of Business and Technology
+                            </Typography>
+                            <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="body1" component="span">
+                                The goal of cognitive science is to understand the principles of intelligence with the hope that this will lead to better comprehension.
+                            </Typography><br />
+                            <Fab variant="extended" size="small" color="white" aria-label="add" sx={{ px: 3, my: 2 }}>
+                                2016-2021
+                            </Fab>
+                        </Box>
+                        <Box data-aos="zoom-in" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
                                 Computer Science & Engineering
                             </Typography>
@@ -69,7 +71,7 @@ const Resume = () => {
                             </Fab>
                         </Box>
 
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="zoom-in" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold' }} variant="h4" component="h2">
                                 Computer Science & Engineering
                             </Typography>
@@ -91,7 +93,7 @@ const Resume = () => {
                                 Personal Skills
                             </Typography>
                         </Box>
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="flip-left" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold', my: 2 }} variant="h5" component="h2">
                                 Time Management
                             </Typography>
@@ -114,7 +116,7 @@ const Resume = () => {
                                 Technical Skills
                             </Typography>
                         </Box>
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="fade-left" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold', my: 2, }} variant="h5" component="h2">
                                 Frontend Development
                             </Typography>
@@ -141,7 +143,7 @@ const Resume = () => {
                             </Fab>
                         </Box>
 
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="fade-left" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold', my: 2, }} variant="h5" component="h2">
                                 Backend Development
                             </Typography>
@@ -168,7 +170,7 @@ const Resume = () => {
                             </Fab>
                         </Box>
 
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="fade-left" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold', my: 2, }} variant="h5" component="h2">
                                 Design Tools
                             </Typography>
@@ -182,7 +184,7 @@ const Resume = () => {
                                 Figma
                             </Fab>
                         </Box>
-                        <Box sx={{ my: 6 }}>
+                        <Box data-aos="fade-left" sx={{ my: 6 }}>
                             <Typography sx={{ fontWeight: 'bold', my: 2, }} variant="h5" component="h2">
                                 IOT Technology
                             </Typography>

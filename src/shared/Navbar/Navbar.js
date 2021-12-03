@@ -16,11 +16,14 @@ import EmailIcon from '@mui/icons-material/Email';
 import MenuItem from '@mui/material/MenuItem';
 import { Fab } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
+import HomeIcon from '@mui/icons-material/Home';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const pages = ['About Me', 'Resume', 'Portfolio', 'Service', 'Contact Me'];
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+    const cv_link = '';
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -77,48 +80,72 @@ const Navbar = () => {
                             ))}
                         </Menu>
                     </Box>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-                    >
-                        LOGO
-                    </Typography>
+
+
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
+                            <HomeIcon sx={{ mr: 2 }} />
+                            <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_home">
+                                Home
+                            </HashLink>
+                        </Fab>
+                        <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
                             <ArticleIcon sx={{ mr: 2 }} />
-                            About Me
+                            <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_aboutMe">
+                                About Me
+                            </HashLink>
                         </Fab>
 
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
                             <PermContactCalendarIcon sx={{ mr: 2 }} />
-                            Resume
+                            <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_resume">
+                                Resume
+                            </HashLink>
                         </Fab>
 
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
                             <BackpackIcon sx={{ mr: 2 }} />
-                            Portfolio
+
+                            <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_portfolio">
+                                Portfolio
+                            </HashLink>
                         </Fab>
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
                             <SettingsIcon sx={{ mr: 2 }} />
-                            Service
+
+                            <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_service">
+                                Services
+                            </HashLink>
+
                         </Fab>
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
                             <EmailIcon sx={{ mr: 2 }} />
-                            Contact Me
+                            <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_contactMe">
+                                Contact Me
+                            </HashLink>
                         </Fab>
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Button sx={{ backgroundColor: '#ff451b' }} color="warning" variant="contained">
                             <DownloadIcon />
-                            Resume
+                            {/* <Link style={{ textDecoration: 'none', color: 'white' }} to="https://doc-14-1k-docs.googleusercontent.com/docs/securesc/e1399em2tn5c56kqe91vq4k9fgviqqbc/3bc3ddbmieebe1u7ijl6abf7lbe9f7oc/1638471375000/05459977071584532243/05459977071584532243/1d8wchJzQFdMn5clzzi9VTyyz3B92cOyL?e=download&authuser=0&nonce=54m4pob9utp9c&user=05459977071584532243&hash=61lv3pb7l6nu6tg621jdnprbj0i95r46">
+                                Resume
+                            </Link> */}
+
+                            <a style={{ textDecoration: 'none', color: 'white' }} class='social-icon-link github'
+                                href="https://drive.google.com/file/d/1d8wchJzQFdMn5clzzi9VTyyz3B92cOyL/view?usp=sharing"
+                                target='_blank'
+                                rel="noreferrer"
+                                aria-label='Github'
+                            >
+                                Download
+                            </a>
                         </Button>
                     </Box>
                 </Toolbar>
             </Container>
-        </AppBar>
+        </AppBar >
 
     )
 };

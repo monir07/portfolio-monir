@@ -8,15 +8,22 @@ import { Fab } from '@mui/material';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import MailIcon from '@mui/icons-material/Mail';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 const ContactMe = () => {
+    // aos initialization
+    React.useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
     const scale = 'scale(2)';
     return (
-        <Container>
-            <Typography sx={{ fontWeight: 'bold', my: 5, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
+        <Container id="_contactMe">
+            <Typography sx={{ fontWeight: 'bold', my: 8, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
                 Contact Me
             </Typography>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                <Grid item xs={4} md={4}>
+                <Grid data-aos="fade-right" item xs={4} md={4}>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 6 }}>
                         <PhoneIphoneIcon sx={{ transform: scale, mr: 3, my: 2 }} color="warning" />
                         <Box>
@@ -52,7 +59,7 @@ const ContactMe = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={4} md={8}>
-                    <Box sx={{ flexGrow: 1 }} component="form">
+                    <Box data-aos="fade-left" sx={{ flexGrow: 1 }} component="form">
                         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                             <Grid item xs={4} sm={4} md={6}>
                                 <TextField sx={{ mr: 1 }} fullWidth id="fullWidth" label="Your Name" variant="outlined" />

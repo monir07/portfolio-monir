@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Service from '../Service/Service';
 
 const Services = () => {
+
     const serviceData = [
         {
             "id": 1,
@@ -40,11 +41,11 @@ const Services = () => {
     ];
 
     return (
-        <Container sx={{ my: 5 }}>
+        <Container id="_service" sx={{ my: 5 }}>
             <Typography sx={{ fontWeight: 'bold', my: 5, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
                 My Services
             </Typography>
-            <Box data-aos="fade-in" sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
                         serviceData.map(service =>

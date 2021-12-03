@@ -4,11 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Service = () => {
+    React.useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
     const img = 'https://mui.com/static/images/cards/contemplative-reptile.jpg';
     return (
-        <Card elevation={8} >
+        <Card data-aos="zoom-in" elevation={8} >
             <CardActionArea>
                 <CardMedia
                     component="img"

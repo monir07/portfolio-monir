@@ -8,7 +8,7 @@ import image1 from '../../Banner-img.png';
 const Slider = () => {
 
     return (
-        <Container>
+        <Container id="_home">
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     <Grid item xs={6} md={8} sx={{ display: 'flex', alignItems: 'center', }}>

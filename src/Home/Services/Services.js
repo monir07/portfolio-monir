@@ -1,62 +1,89 @@
-import React from 'react';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+import * as React from 'react';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Service from '../Service/Service';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Services = () => {
+    React.useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
 
-    const serviceData = [
+    const serviceImage = [
         {
             "id": 1,
-            "name": "Sports & Orthopaedics",
-            "description": "Our orthopaedic specialists and occupational therapists provide all-rounded treatment of knee, spine, hip and other sports and orthopaedic injuries.",
-            "img": "https://www.mountelizabeth.com.sg/images/default-source/banner/tmb_geh_meh_peh/tmbphase2_ortho_v01.jpg"
+            "name": "React",
+            "img": "https://i.ibb.co/Y8JbB1W/react.png"
         },
         {
             "id": 2,
-            "name": "Heart",
-            "description": "Mount Elizabeth hosts the largest concentration of heart specialists in the Asia Pacific region. Equipped with modern technology and world-class facilities, we offer patients renewed possibilities in managing heart health.",
-            "img": "https://www.mountelizabeth.com.sg/images/default-source/banner/tmb_phase-3/thumbnails/tmbphase3_gensurgery_v01.jpg"
+            "name": "Django",
+            "img": "https://i.ibb.co/FBSMKxk/Django.png"
         },
         {
             "id": 3,
-            "name": "Cancer",
-            "description": "Our broad range of diagnostic tests, advanced chemotherapy and radiation treatment, counselling services and dedicated palliative care and support services provide a holistic care environment for positive outcomes.",
-            "img": "https://www.mountelizabeth.com.sg/Sitefinity/WebSiteTemplates/ParkwayTemplate/App_Themes/ParkwayTheme/Images/en/centre-excellence/07_186481191.jpg"
+            "name": "Python",
+            "img": "https://i.ibb.co/J2ddvqR/python.png"
         },
         {
             "id": 4,
-            "name": "Maternity",
-            "description": "With a multidisciplinary team of obstetricians, fertility specialists, nurses, lactation consultants and a wide range of amenities, to give you advice, support, and peace of mind",
-            "img": "https://www.mountelizabeth.com.sg/images/default-source/default-album/maternity-journey.jpg"
+            "name": "Material UI",
+            "img": "https://i.ibb.co/BLVnwZJ/materialui.png"
         },
         {
             "id": 5,
-            "name": "Gastroenterology",
-            "description": "The Gastroenterology Centre unites gastroenterology, hepatology, colorectal and hepato-pancreato-biliary surgery together with nutrition, to optimise recovery.",
-            "img": "https://www.mountelizabeth.com.sg/images/default-source/default-album/06_186481198_v2.jpg?sfvrsn=7f5bcd11_2"
+            "name": "Node Js",
+            "img": "https://i.ibb.co/v4jqTW6/nodejs.png"
+        },
+        {
+            "id": 6,
+            "name": "Mongo DB",
+            "img": "https://i.ibb.co/KhP9PXX/mongodb.png"
+        },
+        {
+            "id": 7,
+            "name": "PostgreSql",
+            "img": "https://i.ibb.co/WvdGwqf/postgresql.png"
+        },
+        {
+            "id": 8,
+            "name": "TailwindCSS",
+            "img": "https://i.ibb.co/3FvG1YF/tailwindcss.png"
         }
     ];
 
     return (
-        <Container id="_service" sx={{ my: 5 }}>
-            <Typography sx={{ fontWeight: 'bold', my: 5, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
-                My Services
+        <Container id="_service">
+            <Typography sx={{ fontWeight: 'bold', my: 8, color: '#ff451b', textAlign: 'center' }} variant="h3" component="h2">
+                Service
             </Typography>
             <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 12, md: 12 }}>
                     {
-                        serviceData.map(service =>
-                            <Grid item xs={4} sm={4} md={4} key={service.id}>
-                                <Service />
+                        serviceImage.map(service =>
+                            <Grid item xs={2} sm={4} md={3} key={service.id}>
+                                <Paper data-aos="zoom-in" elevation={0}>
+                                    <CardMedia
+                                        component="img"
+                                        height="140"
+                                        image={service.img}
+                                        alt="green iguana"
+                                        sx={{ width: "50%", height: 'auto', display: 'block', margin: 'auto' }}
+                                    />
+                                    <Typography align="center" gutterBottom variant="subtitle2" component="h2" color="gray">
+                                        {service.name}
+                                    </Typography>
+                                </Paper>
                             </Grid>
                         )
                     }
                 </Grid>
             </Box>
-        </Container >
+        </Container>
     );
 };
 

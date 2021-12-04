@@ -4,31 +4,49 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Button from '@mui/material/Button';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const Service = () => {
+const Service = ({ services }) => {
     React.useEffect(() => {
         Aos.init({ duration: 2000 });
     }, []);
-    const img = 'https://mui.com/static/images/cards/contemplative-reptile.jpg';
+
+    const { name, description, img, liveSite } = services;
     return (
         <Card data-aos="zoom-in" elevation={8} >
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="140"
+                    height="250"
                     image={img}
                     alt="green iguana"
+                    sx={{ width: "100%", height: 'auto', display: 'block', margin: 'auto' }}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                        Lizard
+                        {name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
+                        {description}
                     </Typography>
+                    <Button sx={{ backgroundColor: '#ff451b', mt: 2, mr: 2 }} color="warning" variant="contained">
+                        {/* <DownloadIcon /> */}
+                        <a style={{ textDecoration: 'none', color: 'white' }}
+                            href={liveSite}
+                            target='_blank'
+                            rel="noreferrer"
+                            aria-label='Github'
+                        >
+                            Live Site
+                        </a>
+                    </Button>
+
+                    <Button sx={{ backgroundColor: '#ff451b', mt: 2 }} color="warning" variant="contained">
+                        {/* <DownloadIcon /> */}
+                        Details
+                    </Button>
                 </CardContent>
             </CardActionArea>
         </Card >

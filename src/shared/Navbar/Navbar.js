@@ -18,12 +18,11 @@ import { Fab } from '@mui/material';
 import DownloadIcon from '@mui/icons-material/Download';
 import HomeIcon from '@mui/icons-material/Home';
 import { HashLink } from 'react-router-hash-link';
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const pages = ['About Me', 'Resume', 'Portfolio', 'Service', 'Contact Me'];
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const cv_link = '';
+
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -84,9 +83,8 @@ const Navbar = () => {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
-                            <HomeIcon sx={{ mr: 2 }} />
                             <HashLink style={{ textDecoration: 'none', color: 'white' }} smooth to="/#_home">
-                                Home
+                                <HomeIcon />
                             </HashLink>
                         </Fab>
                         <Fab sx={{ mx: 1, backgroundColor: '#ff451b', color: 'white' }} variant="extended" color="secondary" aria-label="add">
@@ -129,17 +127,13 @@ const Navbar = () => {
                     <Box sx={{ flexGrow: 0 }}>
                         <Button sx={{ backgroundColor: '#ff451b' }} color="warning" variant="contained">
                             <DownloadIcon />
-                            {/* <Link style={{ textDecoration: 'none', color: 'white' }} to="https://doc-14-1k-docs.googleusercontent.com/docs/securesc/e1399em2tn5c56kqe91vq4k9fgviqqbc/3bc3ddbmieebe1u7ijl6abf7lbe9f7oc/1638471375000/05459977071584532243/05459977071584532243/1d8wchJzQFdMn5clzzi9VTyyz3B92cOyL?e=download&authuser=0&nonce=54m4pob9utp9c&user=05459977071584532243&hash=61lv3pb7l6nu6tg621jdnprbj0i95r46">
-                                Resume
-                            </Link> */}
-
-                            <a style={{ textDecoration: 'none', color: 'white' }} class='social-icon-link github'
+                            <a style={{ textDecoration: 'none', color: 'white' }}
                                 href="https://drive.google.com/file/d/1d8wchJzQFdMn5clzzi9VTyyz3B92cOyL/view?usp=sharing"
                                 target='_blank'
                                 rel="noreferrer"
                                 aria-label='Github'
                             >
-                                Download
+                                Resume
                             </a>
                         </Button>
                     </Box>

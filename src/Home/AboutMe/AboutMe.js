@@ -32,14 +32,14 @@ const AboutMe = () => {
 
                         <Box data-aos="fade-left">
                             <Typography sx={{ fontWeight: 'bold', mt: 2 }} variant="h2" component="h2">
-                                World leading UI/UX designer
+                                Full-Stack Developer
                             </Typography>
 
                             <Typography sx={{ my: 2 }} variant="h5" component="h2">
                                 A passionate Full Stack Web Developer <br /> based in Khulna, Bangladesh
                             </Typography>
                             <Typography sx={{ my: 2, color: '#9c9d9e' }} variant="body1" component="span">
-                                Hi! My name is Jessica Parker. I am UI/UX designer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional graphic designer, I have acquired the skills and knowledge necessary to make your project a success.
+                                Hi! My name is Monirul Islam. I am Full Stack web developer, and I'm very passionate and dedicated to my work. I am proficient in working with both front-end and back-end coding languages. With my diverse skill set, I'm able to work on every step of the web development process, including prototyping and programming browsers, servers, and databases. I have acquired the skills and knowledge necessary to make your project a success.
                             </Typography>
                         </Box>
 
